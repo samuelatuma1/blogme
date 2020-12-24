@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content="width=device-width,
+                            initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel='stylesheet' href='{% static "css/blog.css" %}'>
+
+        <!-- Not part of the book just personal-->
+        <script src='{% static "js/pblog.js" %}'></script>
+        <link rel='stylesheet' href='{% static "css/pblog.css" %}'>
+        <!-- End of personal-->
+        
+    </head>
+
+    <body>
+        <!-- Not part of the book just personal-->
+        <nav id='nav'>
+            <div id='nav_home'>Blog</div>
+            <ul id='hidelist'>
+                <li>My blog</li>
+                <li>This is my blog</li>
+               
+            </ul>
+        </nav>
+        <!-- End of personal-->
+
+    
+        <div id='content'>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div id='sidebar'>
+            <h2>My blog</h2>
+          
+            <p>This is my blog</p>
+        </div>
+
+    </body>
+</html>
