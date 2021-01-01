@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Share a post {% endblock %}
+
+{% block content %}
+
+{% if sent %}
+
+    <h2>Email sent successfully</h2>
+    <p>"{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }} </p>
+
+{% else %}
+    <h1>Share "{{ post.title }}" via mail</h1>
+    <br>
+    
+    <form method='post' action='{% url "blog:post_share" post.id %}'>
+    
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='send a mail'>
+   
+    </form>
+{% endif %}
+
+{% endblock %}

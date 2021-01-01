@@ -1,0 +1,182 @@
+body { 
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif; 
+
+    /* I included overflow-x */
+    overflow-x: hidden;
+}
+
+a { 
+    color: brown;
+    text-decoration:none; 
+}
+a:hover{
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1 { 
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+h2 {
+    font-weight:normal;
+    margin:30px 0 0;
+}
+
+#section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+    
+}
+
+
+
+#sidebar { 
+padding:15px;
+margin: auto;
+height: 100%;
+background-color: white;
+/*background:#efefef; */
+}
+#content{
+background-color: white;
+}
+#sidebar h2{
+font-weight: bold;
+color: navy;
+margin: auto;
+justify-content: center;
+}
+
+
+@media (max-width: 800px){
+#sidebar{
+border-top: 1px solid rgb(228, 227, 227);
+width: 90%;
+padding-left: 10%;
+}
+
+#content{
+width: 99%;
+padding: 15px;
+}
+
+}
+@media (min-width: 801px){
+#sidebar{
+width:25%;
+border-radius: 10px;
+border: 1px solid rgb(233, 229, 229);
+height: 100vh;
+box-shadow: 5px 5px 5px 5px rgb(247, 247, 247);
+}
+
+#content { 
+width:65%;
+padding:0 0 0 30px; 
+border-radius: 10px;
+border: 1px solid rgb(233, 229, 229);
+margin-left: 10px;
+box-shadow: 5px 10px 5px 5px rgb(247, 247, 247);
+}
+
+}
+
+
+
+
+p.date { 
+    color: grey;
+    font-family: georgia, serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* pagination */
+.pagination { 
+    margin:40px 0; 
+    font-weight:bold;
+}
+
+/* forms */
+label { 
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px; 
+}
+input, textarea { 
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(228, 227, 227);
+    padding:6px 10px;
+    font-size:12px;
+}
+.readMore{
+    border: 1px solid brown;
+    color: brown;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    background-color: white;
+
+}
+input[type=submit] {
+    font-weight:bold;
+    background:#00abff;
+    color:#fff;
+    border-radius: 8px;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase; 
+}
+.errorlist { 
+    color: red;
+    float:left;
+    clear:both;
+    padding-left:10px; 
+}
+
+/* comments */
+.comment {
+    padding:10px;
+}
+.comment:nth-child(even) {
+    background:#efefef;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+#commentInfo{
+    width: 95%;
+    clear: both;
+    background-color: white;
+    border: 1px solid rgb(225, 224, 224);
+    padding: 15px;
+    border-radius: 20px;
+}
+#commentInfo > h2{
+    text-align: center
+}
+@media (max-width: 800px){
+    #commentInfo{
+        width: 95%; 
+    }
+}
+
